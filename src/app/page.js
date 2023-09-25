@@ -34,29 +34,34 @@ export default function Home() {
   const parsedHtml = marked.parse(state)
 
   return (
-    <div className="h-screen bg-gray-600">
-      <header className="">
-        <nav className="nav">Header</nav>
-      </header>
-      <main className="grid grid-cols-2 bg-gray-700 w-full h-full overflow-hidden">
+    <div className="h-screen bg-gray-500">
+      <header className="text-center p-2">Markdown Previewer</header>
+      <main className="grid grid-cols-2  w-full h-full">
         <div className="h-full bg-gray-500">
-          <h2 className="">Editor</h2>
+          <h2 className="text-center p-2 border-solid border-2 border-gray-800 rounded-md">
+            Editor
+          </h2>
           <textarea
             id="editor"
             value={state} // Force the input's value to match the state variable
             onChange={(e) => setState(e.target.value)} // Update the state variable on any edits
-            className="w-full h-full bg-gray-700"
+            className="w-full h-[90%] bg-gray-500 p-2"
           ></textarea>
         </div>
 
-        <div className=" bg-gray-800">
-          <h2 className="">Previewer</h2>
+        <div className=" h-full bg-gray-500 border-l-solid border-l-2 border-l-gray-800 rounded-md">
+          <h2 className="text-center p-2 border-solid border-2 border-gray-800 rounded-md">
+            Previewer
+          </h2>
           {/* Set as innerHtml because otherway it is set as text */}
-          <div id="preview" dangerouslySetInnerHTML={{ __html: parsedHtml }}></div>
+          <div id="preview" dangerouslySetInnerHTML={{ __html: parsedHtml }} className="p-4"></div>
         </div>
       </main>
 
-      <footer className="">Footer</footer>
+      <footer className="text-center">
+        Made by{' '}
+        <a href="https://github.com/webdev4422/fcc-frontend-markdown-previewer">webdev4422</a>
+      </footer>
 
       <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </div>
