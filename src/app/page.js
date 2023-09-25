@@ -27,6 +27,8 @@ export default function Home() {
     return
   }
   \`\`\`
+
+  ![image](image.jpg)
   `) // Declare a state variable
 
   marked.setOptions({ breaks: true }) // Set option to interpret carriage returns and renders them as <br> (line break) elements
@@ -34,10 +36,12 @@ export default function Home() {
   const parsedHtml = marked.parse(state)
 
   return (
-    <div className="h-screen bg-gray-500">
-      <header className="text-center p-2">Markdown Previewer</header>
+    <div className="grid h-screen bg-gray-500">
+      <header className="text-center">
+        <h1 className="">Markdown Previewer</h1>
+      </header>
       <main className="grid grid-cols-2  w-full h-full">
-        <div className="h-full bg-gray-500">
+        <div className="h-full bg-gray-500 p-0 m-0">
           <h2 className="text-center p-2 border-solid border-2 border-gray-800 rounded-md">
             Editor
           </h2>
@@ -45,7 +49,7 @@ export default function Home() {
             id="editor"
             value={state} // Force the input's value to match the state variable
             onChange={(e) => setState(e.target.value)} // Update the state variable on any edits
-            className="w-full h-[90%] bg-gray-500 p-2"
+            className="w-full h-[85%] box-border bg-gray-500 p-0 m-0 b-0 "
           ></textarea>
         </div>
 
