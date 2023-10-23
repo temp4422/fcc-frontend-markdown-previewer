@@ -40,9 +40,9 @@ export default function Home() {
       <header className="text-center">
         <h1 className="">Markdown Previewer</h1>
       </header>
-      <main className="grid grid-cols-2  w-full h-full">
-        <div className="h-full bg-gray-500 p-0 m-0">
-          <h2 className="text-center p-2 border-solid border-2 border-gray-800 rounded-md">
+      <main className="grid w-full h-full grid-cols-2">
+        <div className="h-full p-0 m-0 bg-gray-500">
+          <h2 className="p-2 text-center border-2 border-gray-800 border-solid rounded-md">
             Editor
           </h2>
           <textarea
@@ -53,8 +53,8 @@ export default function Home() {
           ></textarea>
         </div>
 
-        <div className=" h-full bg-gray-500 border-l-solid border-l-2 border-l-gray-800 rounded-md">
-          <h2 className="text-center p-2 border-solid border-2 border-gray-800 rounded-md">
+        <div className="h-full bg-gray-500 border-l-2 rounded-md border-l-solid border-l-gray-800">
+          <h2 className="p-2 text-center border-2 border-gray-800 border-solid rounded-md">
             Previewer
           </h2>
           {/* Set as innerHtml because otherway it is set as text */}
@@ -67,7 +67,7 @@ export default function Home() {
         <a href="https://github.com/webdev4422/fcc-frontend-markdown-previewer">webdev4422</a>
       </footer>
 
-      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </div>
   )
 }
